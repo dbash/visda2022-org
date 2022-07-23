@@ -76,13 +76,15 @@ Refer to evalai documentation for more information on how to [participate](https
 For both phases, we ask the participants to submit their predictions in the following format: the submitted file should be a zip archive containing two folders: **source_only** and **uda** containing predictions of the source-only and adaptation version of their solution. Each folder should contain the predicted label maps in the original label mapping (0 = 'background', 1 = 'rigid_plastic', 2 = 'cardboard', 3 = 'metal', 4 = 'soft_plastic') that should have the same name and file extension as the corresponding input images. 
 
 ## Baseline results
-The baseline results on the test set of ZeroWaste V2 are as follows:
-| Experiment            |    mIoU     |    Acc      |
-| -----------           | ----------- | ----------- |
-| SegFormer V1          |       45.49      |     91.64       |
-| SegFormer Synthwaste_aug+V1 |      42.61   |      91.22   |
-| DAFormer V1->V2       |       52.26      |      91.2       |
-| DAFormer SynthWaste_aug+V1->V2 |      48.31     |    90.63     |
+The baseline results on the test and validation sets of ZeroWaste V2 are as follows:
+| Experiment            |   test mIoU     |  test  Acc      |  val mIoU     |  val  Acc      |
+| -----------           | ----------- | ----------- |  ----------- | ----------- |
+| SegFormer V1          |     45.49   |     91.64   |        45.56      |      87.85       |
+| SegFormer Synthwaste_aug+V1 |      42.61   |      91.22   |   41.2   |    87.19    |
+| DAFormer V1->V2       |       52.26      |      91.2       |   50.84   |   87.29    |
+| DAFormer SynthWaste_aug+V1->V2 |      48.31     |    90.63     |   46.29  |   87.0   |
+
+
 
 ## Custom simulation
 We also allow the participants to generate their custom synthetic datasets to achieve the best performance. Please see how to use our simulation software [here](simulation/readme.txt). 
