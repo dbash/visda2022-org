@@ -69,7 +69,9 @@ Information regarding challenge phases can be found under "Phases". We are curre
 
 Once submitted, you can see the status of your submission under "My Submissions". Each evaluation takes around 9 mins during which your submission will be in the "Running" state. The server handles one submission at a time, so you may see your submission in the "Submitted" state before it gets to "Running".
 
-Refer to evalai documentation for more information on how to [participate](https://evalai.readthedocs.io/en/latest/participate.html) and how to [handle submissions](https://evalai.readthedocs.io/en/latest/make_submission_public_private_baseline.html). Feel free to contact the visda organizers via [email](mailto:visda-organizers@googlegroups.com), or a github issue for questions regarding the interface.
+Refer to evalai documentation for more information on how to [participate](https://evalai.readthedocs.io/en/latest/participate.html) and how to [make submissions public](https://evalai.readthedocs.io/en/latest/make_submission_public_private_baseline.html). We encourage participants to make their best submissions publicly visible on the leaderboard in the dev phase. Note that this will be a requirement in the test phase, for a participating solution to be considered for a prize.
+
+Feel free to contact the visda organizers via [email](mailto:visda-organizers@googlegroups.com), or a github issue for questions regarding the interface.
 
 
 ## Submission format
