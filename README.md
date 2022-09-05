@@ -57,6 +57,7 @@ To evaluate the model and output the visual examples of the predictions, run the
 ```shell
 python -m tools.test /path/to/config/file /path/to/checkpoint.pth --eval mIoU --show-dir /path/to/output/predictions --opacity 1
 ```
+To get the predictions for the validation set of ZeroWasteV2, please use the corresponding `*_val.json` config file or modify the config file in `configs/_base_/datasets/*.json` to point to the validation data_root in the test dataset configuration.
 To produce final predictions in the original label mapping (0 = 'background', 1 = 'rigid_plastic', 2 = 'cardboard', 3 = 'metal', 4 = 'soft_plastic'), use the following script:
 ```shell
 python -m tools.convert_visuals_to_labels /path/to/output/predictions /output/label/path/
