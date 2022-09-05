@@ -1,0 +1,62 @@
+{
+    "_base_": [
+        "../_base_/default_runtime.py",
+        "../_base_/models/segformer_b5_synthwaste.py",
+        "../_base_/datasets/synthzerowaste_to_zerowastev2_512x512_val.py",
+        "../_base_/schedules/adamw.py",
+        "../../_base_/schedules/poly10warm.py"
+    ],
+    "n_gpus": 1,
+    "seed": 0,
+    "model": {
+        "pretrained": "pretrained/synthwaste.pth",
+        "backbone": {
+            "type": "mit_b5"
+        },
+        "decode_head": {}
+    },
+    "data": {
+        "samples_per_gpu": 2,
+        "workers_per_gpu": 4,
+        "train": {}
+    },
+    "optimizer": {
+        "lr": 6e-05,
+        "paramwise_cfg": {
+            "custom_keys": {
+                "head": {
+                    "lr_mult": 10.0
+                },
+                "pos_block": {
+                    "decay_mult": 0.0
+                },
+                "norm": {
+                    "decay_mult": 0.0
+                }
+            }
+        }
+    },
+    "runner": {
+        "type": "IterBasedRunner",
+        "max_iters": 40000
+    },
+    "checkpoint_config": {
+        "by_epoch": false,
+        "interval": 8000,
+        "max_keep_ckpts": 1
+    },
+    "evaluation": {
+        "interval": 100,
+        "metric": "mIoU"
+    },
+    "name": "transfer_synthwaste_zerowaste2zerowastev2_source-only_segformer_mitb5",
+    "exp": 1,
+    "name_dataset": "zerowaste2zerowastev2",
+    "name_architecture": "segformer_mitb5",
+    "name_encoder": "mitb5",
+    "name_decoder": "segformer",
+    "name_uda": "source-only",
+    "name_opt": "adamw_6e-05_pmTrue_poly10warm_1x2_40k",
+    "work_dir": "work_dirs/source_only/transfer_synthwaste_zerowaste2zerowastev2_source-only_segformer_mitb5",
+    "git_rev": "8d6e710700ff5e6a053c77bfe384ba44d4672cbe"
+}
