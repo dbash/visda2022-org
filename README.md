@@ -18,16 +18,20 @@ sh tools/download_checkpoints.sh
 
 
 ## Setup Datasets
-**ZeroWaste V1:** Please, download zerowaste-f.zip (7 Gb) from [here](http://csr.bu.edu/ftp/recycle/visda-2022/) and extract them to `data/zerowaste-f`.
+**ZeroWaste V1:** Please, download zerowaste-f.zip (7 G) from [here](http://csr.bu.edu/ftp/recycle/visda-2022/) and extract them to `data/zerowaste-f`.
 
-**ZeroWaste V2 (unlabeled)** Please, download zerowaste-v2-trainval.zip (12 Gb) from
+**ZeroWaste V2 (unlabeled)** Please, download zerowaste-v2-trainval.zip (12 G) from
 [here](http://csr.bu.edu/ftp/recycle/visda-2022/) and extract
 it to `data/zerowaste-v2-splits/`.
 
-**SynthWaste:** Please, download synthwaste_splits.zip (48 Gb) from
+**ZeroWaste V2 (test)** Please, download zerowaste-v2-test.zip (1.8 G) from
+[here](http://csr.bu.edu/ftp/recycle/visda-2022/) and extract
+it to `data/zerowaste-v2-splits/`.
+
+**SynthWaste:** Please, download synthwaste_splits.zip (48 G) from
 [here](http://csr.bu.edu/ftp/recycle/visda-2022/) and extract it to `data/synthwaste`.
 
-**SynthWaste-aug:** Please, download 	synthwaste_aug.zip (33Gb) from
+**SynthWaste-aug:** Please, download 	synthwaste_aug.zip (33G) from
 [here](http://csr.bu.edu/ftp/recycle/visda-2022/) and extract it to `data/synthwaste-aug` (this folder contains only the augmented train set).
 
 Note: if you want to retrain the model on the combination of SynthWaste-aug and ZeroWaste-f, please combine the folders of ZeroWaste V1 and SynthWaste-aug to the folder `data/synthwaste_aug_zerowastev1`. 
